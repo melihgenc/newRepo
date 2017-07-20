@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ecc99c84c1304f9b928ff4475efd1623" Name="Diagram1">
+        <EntityTypeShape EntityType="gFitnessTrialModel.LOOKUPRole" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gFitnessTrialModel.SYSUser" Width="1.5" PointX="5.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="gFitnessTrialModel.SYSUserProfile" Width="1.5" PointX="7.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gFitnessTrialModel.SYSUserRole" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="gFitnessTrialModel.FK__SYSUserRo__LOOKU__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="gFitnessTrialModel.FK__SYSUserRo__SYSUs__1FCDBCEB" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
