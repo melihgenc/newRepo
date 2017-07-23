@@ -31,5 +31,9 @@ namespace gFitness.Models.DB
         public DbSet<SYSUserRole> SYSUserRoles { get; set; }
 
         public System.Data.Entity.DbSet<gFitness.Models.ViewModel.UserSignUpView> UserSignUpViews { get; set; }
+
+        public System.Data.Entity.DbSet<gFitness.Models.ViewModel.UserLoginView> UserLoginViews { get; set; }
+
+        public System.Data.Entity.DbSet<gFitness.Models.ViewModel.UserProfileView> UserProfileViews { get; set; }
     }
 }
