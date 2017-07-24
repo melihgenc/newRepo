@@ -1,28 +1,49 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
-
+using System.ComponentModel;
 
 namespace gFitness.Models.ViewModel
 {
-    public class UserSignUpView
+    public class Register
     {
-        [Key]
-        public int SYSUserID { get; set; }
-        public int LOOKUPRoleID { get; set; }
-        public string RoleName { get; set; }
-        [Required(ErrorMessage = "*")]
-        [Display(Name = "Login ID")]
-        public string LoginName { get; set; }
-        [Required(ErrorMessage = "*")]
-        [Display(Name = "Password")]
+        [Required(ErrorMessage = "Kullanıcı adı boş olamaz.")]
+        [DisplayName("Kullanıcı Adı")]
+        public string Username { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [DisplayName("E-Posta")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Parola alanı boş olamaz.")]
+        [StringLength(100, ErrorMessage = "Parola en az 6 karakter olmalıdır.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [DisplayName("Parola")]
         public string Password { get; set; }
-        [Required(ErrorMessage = "*")]
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; }
-        [Required(ErrorMessage = "*")]
-        [Display(Name = "Last Name")]
-        public string LastName { get; set; }
+
+
+        [DataType(DataType.Password)]
+        [DisplayName("Parola Tekrar")]
+        [Compare("Password", ErrorMessage = "Parolalar aynı değil.")]
+        public string ConfirmPassword { get; set; }
+
+        public string RoleId { get; set; }
+
+        [Required(ErrorMessage = "Ad boş olamaz.")]
+        [DisplayName("Adınız")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Soyad boş olamaz.")]
+        [DisplayName("Soyadınız")]
+        public string Surname { get; set; }
+
+        [Required(ErrorMessage = "Cinsiyet boş olamaz.")]
+        [DisplayName("Cinsiyet")]
         public string Gender { get; set; }
+
+        [Required(ErrorMessage = "Telefon numarası boş olamaz.")]
+        [DisplayName("Telefon Numarası")]
+        public string PhoneNumber { get; set; }
     }
 
     public class UserLoginView

@@ -13,15 +13,15 @@ namespace gFitness.Controllers
         }
 
         [HttpPost]
-        public ActionResult SignUp(UserSignUpView USV)
+        public ActionResult SignUp(Register USV)
         {
             if (ModelState.IsValid)
             {
                 UserManager UM = new UserManager();
-                if (!UM.IsLoginNameExist(USV.LoginName))
+                if (!UM.IsLoginNameExist(USV.Username))
                 {
-                    UM.AddUserAccount(USV);
-                    FormsAuthentication.SetAuthCookie(USV.FirstName, false);
+                    UM.Register(USV);
+                    FormsAuthentication.SetAuthCookie(USV.Name, false);
                     return RedirectToAction("Welcome", "Home");
 
                 }

@@ -165,18 +165,26 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\DB\gFitnessDB.Context.tt">
+    <Content Include="Models\DB\gFitnessEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>gFitnessDB.edmx</DependentUpon>
-      <LastGenOutput>gFitnessDB.Context.cs</LastGenOutput>
+      <DependentUpon>gFitnessEntity.edmx</DependentUpon>
+      <LastGenOutput>gFitnessEntity.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DB\gFitnessDB.tt">
+    <Content Include="Models\DB\gFitnessEntity.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>gFitnessDB.edmx</DependentUpon>
-      <LastGenOutput>gFitnessDB.cs</LastGenOutput>
+      <DependentUpon>gFitnessEntity.edmx</DependentUpon>
+      <LastGenOutput>gFitnessEntity.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\DB\gFitnessEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>gFitnessEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DB\gFitnessEntity.edmx.diagram">
+      <DependentUpon>gFitnessEntity.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\IISProfileHost.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -199,34 +207,40 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\gFitnessDB.Context.cs">
+    <Compile Include="Models\DB\FitnessClubOwners.cs">
+      <DependentUpon>gFitnessEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB\gFitnessEntity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>gFitnessDB.Context.tt</DependentUpon>
+      <DependentUpon>gFitnessEntity.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\gFitnessDB.cs">
+    <Compile Include="Models\DB\gFitnessEntity.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>gFitnessDB.tt</DependentUpon>
+      <DependentUpon>gFitnessEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\gFitnessDB.Designer.cs">
+    <Compile Include="Models\DB\gFitnessEntity.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>gFitnessDB.edmx</DependentUpon>
+      <DependentUpon>gFitnessEntity.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\LOOKUPRole.cs">
-      <DependentUpon>gFitnessDB.tt</DependentUpon>
+    <Compile Include="Models\DB\Members.cs">
+      <DependentUpon>gFitnessEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\SYSUser.cs">
-      <DependentUpon>gFitnessDB.tt</DependentUpon>
+    <Compile Include="Models\DB\Roles.cs">
+      <DependentUpon>gFitnessEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\SYSUserProfile.cs">
-      <DependentUpon>gFitnessDB.tt</DependentUpon>
+    <Compile Include="Models\DB\Trainers.cs">
+      <DependentUpon>gFitnessEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\SYSUserRole.cs">
-      <DependentUpon>gFitnessDB.tt</DependentUpon>
+    <Compile Include="Models\DB\UserDetails.cs">
+      <DependentUpon>gFitnessEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entitiy Manager\UserManager.cs" />
+    <Compile Include="Models\Entity Manager\UserManager.cs" />
+    <Compile Include="Models\DB\Users.cs">
+      <DependentUpon>gFitnessEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ViewModel\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\AuthorizeRoleAttribute.cs" />
@@ -236,13 +250,6 @@
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Models\DB\gFitnessDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>gFitnessDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DB\gFitnessDB.edmx.diagram">
-      <DependentUpon>gFitnessDB.edmx</DependentUpon>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
