@@ -1,4 +1,4 @@
-﻿@model gFitness.Models.ViewModel.UserSignUpView
+﻿@model gFitness.Models.UserSignUpView
 
 @{
     ViewBag.Title = "SignUp";
@@ -10,6 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
 
     <div class="form-horizontal">
         <hr />

@@ -97,3 +97,6 @@ C:\Users\utkuBastug\Source\Repos\gFitness\gFitness\bin\System.Web.Mvc.xml
 C:\Users\utkuBastug\Source\Repos\gFitness\gFitness\obj\Debug\gFitness.dll
 C:\Users\utkuBastug\Source\Repos\gFitness\gFitness\obj\Debug\gFitness.pdb
 C:\Users\utkuBastug\Source\Repos\gFitness\gFitness\obj\Debug\gFitness.csprojResolveAssemblyReference.cache
+C:\Users\Melih\Source\Repos\gFitness\gFitness\gFitness\obj\Debug\gFitness.csprojResolveAssemblyReference.cache
+C:\Users\Melih\Source\Repos\gFitness\gFitness\gFitness\obj\Debug\gFitness.dll
+C:\Users\Melih\Source\Repos\gFitness\gFitness\gFitness\obj\Debug\gFitness.pdb
